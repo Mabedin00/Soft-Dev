@@ -8,6 +8,8 @@ from flask import render_template
 from flask import request
 from flask import session
 from flask import redirect
+from flask import flash
+from flask import url_for
 import os
 import csv
 
@@ -34,7 +36,7 @@ with open('static/credentials.csv') as csv_file:  # open CSV file
 @app.route('/')  #  Login Page
 def index():
     if session.get("user") == CREDENTIALS.get('user') and session.get("password") == CREDENTIALS.get('password'):# load the template with the user's session info
-        return redirect('/auth')        
+        return redirect('/auth')
     return render_template('landingpage.html')
 
 @app.route("/auth")
@@ -50,18 +52,20 @@ def authentication():
         session['password'] = request.args.get('password')
     if 'user' in session:  #  If the session dictionary does in fact have a user in it.
         if session.get("user") == CREDENTIALS.get('user') and session.get("password") == CREDENTIALS.get('password'):# load the template with the user's session info
-            return render_template("responsepage.html", login_info=session, method_type=request.method)        
-        elif session.get('password') != CREDENTIALS.get('password'):
-            return render_template("landingpage.html", invalidlogin_error = "Invalid Password")
-        else: 
-            return render_template("landingpage.html", invalidlogin_error = "Invalid Username")
-    return redirect('/')  #  Otherwise let the user know that they have not logged in
-
+            return render_template("responsepage.html", login_info=session, method_type=request.method)
+        elif session.get("user") != CREDENTIALS.get('user'):
+            flash("Invalid Username")
+            return redirect(url_for('index'))
+        else:
+            flash("Invalid Password")
+            return redirect(url_for('index'))
+    return redirect(url_for('index'))
 
 @app.route('/logout')  #  Logout removes the User's session from the dictionary stored on the server, even if the cookie still exists
 def logout():
     session.pop('user', None)
-    return render_template("logout.html")
+    flash("Logged Out Succesfully")
+    return redirect(url_for("index"))
 
 
 
