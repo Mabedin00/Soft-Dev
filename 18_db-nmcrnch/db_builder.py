@@ -35,9 +35,8 @@ put_data_in("./data/students.csv", "students")
 db.execute("CREATE TABLE IF NOT EXISTS courses (code STRING, mark INTERGER, id INTERGER);")
 put_data_in("./data/courses.csv", "courses")
 
-q = "SELECT name, students.id, mark FROM students, courses WHERE students.id = courses.id;"
 
-foo = c.execute(q)
+
 print("----------------")
 print(foo)
 for bar in foo:
