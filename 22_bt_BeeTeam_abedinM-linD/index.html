@@ -18,64 +18,123 @@
               <code>link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"</code> <br>
               <p class="text-secondary">into the heading of your html file </p>
             </div>
+            <h2>Grids</h2>
+            <h6>You can easily grid your webpage</h6>
             <div class="row text-center">
-                 <div class="col-lg-2">You</div>
-                 <div class="col-lg-4">can easily</div>
-                 <div class="col-lg-6">grid your entire webpage</div>
+                 <div class="col-lg-1" id ="first"> 1 </div>
+                 <div class="col-lg-1" id ="second"> 2 </div>
+                 <div class="col-lg-1" id ="first"> 3 </div>
+                 <div class="col-lg-1" id ="second"> 4 </div>
+                 <div class="col-lg-1" id ="first"> 5 </div>
+                 <div class="col-lg-1" id ="second"> 6 </div>
+                 <div class="col-lg-1" id ="first"> 7 </div>
+                 <div class="col-lg-1" id ="second"> 8 </div>
+                 <div class="col-lg-1" id ="first"> 9 </div>
+                 <div class="col-lg-1" id ="second"> 10 </div>
+                 <div class="col-lg-1" id ="first"> 11 </div>
+                 <div class="col-lg-1" id ="second"> 12 </div>
             </div>
+            Here is how you can make your own rows
             <br>
-        <h2>Cool Tables</h2>
+            <code> < div class = "row" > </code> <br>
+            <code> < div class="col-lg-6" > lorem < /div > </code> <br>
+            <code> < div class="col-lg-6" > ipsum < /div > </code> <br>
+            <p> Notice how each row has 12 columns. The number after col-lg- specifies the size of the column. Make sure they total up to 12.</p>
+            <br>
+            <h2>Cool Tables</h2>
             <p>Bootstraps tables are easy to create and have cool effects</p>
             <table border = "1" class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Lorem</th>
-                        <th>Ipsum</th>
-                    </tr>
-                </thead>
-            <tbody>
+              <thead>
                 <tr>
-                    <td>orci</td>
-                    <td>nulla</td>
+                  <th>Lorem</th>
+                  <th>Ipsum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>orci</td>
+                  <td>nulla</td>
                 </tr>
                 <tr>
-                    <td>pellentesque </td>
-                    <td>dignissim</td>
+                  <td>pellentesque </td>
+                  <td>dignissim</td>
                 </tr>
-                 <tr>
-                   <td>enim </td>
-                   <td>sit</td>
-                 </tr>
-           </tbody>
-         </table>
-         <h2> Tired of just linking square images like this one?</h2>
-         <img class = "sadface" src="sadface.png" alt=":(">
-         <h2> Bootstrap makes images look COOLER!!!</h2>
-         <div class="row text-center">
-              <div class="col-lg-6" id = "description">Rounded Corners
+                <tr>
+                  <td>enim </td>
+                  <td>sit</td>
+                </tr>
+              </tbody>
+            </table>
+            Here is how you can make your own tables<br>
+            <code>
+              < table border = "SIZE" class="table TABLE_TYPE" ><br>
+                &emsp;&emsp;< thead ><br>
+                  &emsp;&emsp;&emsp;< tr ><br>
+                    &emsp;&emsp;&emsp;&emsp;< th >Lorem< /th ><br>
+                  &emsp;&emsp;&emsp;&emsp;< th >Ipsum< /th ><br>
+                  &emsp;&emsp;&emsp;< /tr ><br>
+                &emsp;&emsp;< /thead ><br>
+                &emsp;&emsp;< tbody ><br>
+                  &emsp;&emsp;&emsp;< tr ><br>
+                    &emsp;&emsp;&emsp;&emsp;< td >orci< /td ><br>
+                    &emsp;&emsp;&emsp;&emsp;< td >nulla< /td ><br>
+                  &emsp;&emsp;&emsp;< /tr ><br>
+                &emsp;&emsp;< /tbody ><br>
+              < /table ><br>
+            </code>
+            SIZE will be the size of the border around the table; insert an integer. <br>
+            TABLE_TYPE is the type of table you wish to have. We are using table-hover which shades the row your mouse is over gray. <br>
+            You can also choose from table-striped, table-bordered, and table-condensed. <br>
+            <br>
+            <br>
+            <h2> Tired of just linking square images like this one?</h2>
+           <img class = "sadface" src="sadface.png" alt=":(">
+           <h2> Bootstrap makes images look COOLER!!!</h2>
+           <div class="row text-center">
+                <div class="col-lg-6" id = "description">Rounded Corners
+                </div>
+                <div class="col-lg-6" id = "img"> <img class="rounded" src="rounded corners.jpg" alt"rounded corners"></div>
+           </div>
+           Here is the code for round corners: <code>< div class="col-lg-SIZE" id = "img" > < img class="rounded" src="rounded corners.jpg" alt"rounded corners" >< /div > </code><br>
+           <div class="row text-center">
+                <div class="col-lg-6" id = "description">Circular
+                </div>
+                <div class="col-lg-6" id = "img"> <img class="rounded-circle" src="circle.jpg" alt"circle"></div>
+           </div>
+           Here is the code for circular picture: <code>< div class="col-lg-6" id = "img" > < img class="rounded-circle" src="circle.jpg" alt"circle" >< /di > </code><br><br>
+           <br>
+           <br>
+           <h2> Alerts </h2>
+           <div class="container">
+              <div class="alert alert-success">
+                <strong>Congrats!</strong> You are almost done!
               </div>
-              <div class="col-lg-6" id = "img"> <img class="rounded" src="rounded corners.jpg" alt"rounded corners"></div>
-         </div><br>
-         <div class="row text-center">
-              <div class="col-lg-6" id = "description">Circular
-              </div>
-              <div class="col-lg-6" id = "img"> <img class="rounded-circle" src="circle.jpg" alt"circle"></div>
-         </div><br>
-         <div class="container">
-            <div class="alert alert-success">
-                <strong>Congrats!</strong> You are almost done!.
-            </div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="30"
-            aria-valuemin="0" aria-valuemax="100">
-                95%
-            </div>
-        </div><br>
-        <h2> Lastly, be sure to bookmark this page along with these others by pressing <kbd>Ctrl + D</kbd></h2>
-        <div class="btn-group">
-          <a href= "https://www.w3schools.com/bootstrap/default.asp" type="button" class="btn btn-primary">W33</a>
-          <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" type="button" class="btn btn-primary">Bootstrap</a>
-        </div>
-     </body>
+          </div>
+          Code for alerts:<br>
+          <code>
+            < div class="container" ><br>
+               &emsp;&emsp;< div class="alert alert-TYPES" ><br>
+                 &emsp;&emsp;&emsp;&emsp;< strong >TEXT< /strong > TEXT<br>
+               &emsp;&emsp;< /div ><br>
+           < /div ><br>
+         </code>
+         There are 4 different TYPES of alerts, success, warning, info, and danger each with different box shades<br>
+         <br>
+         <br>
+         <h2> Buttons </h2>
+         <div class="btn-group">
+           <a href= "https://www.w3schools.com/bootstrap/default.asp" type="button" class="btn btn-primary">W33</a>
+           <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/" type="button" class="btn btn-primary">Bootstrap</a>
+         </div> < -- click for more info about Bootstrap<br>
+         you can format a group of buttons to have similar characteristings with btn-group.<br>
+         Code for Buttons:<br>
+         <code>
+           < div class="btn-group" ><br>
+             &emsp;&emsp;< a href= "URL" type="button" class="btn btn-primary" >W33< /a ><br>
+             &emsp;&emsp;< a href="URL" type="button" class="btn btn-primary" >Bootstrap< /a ><br>
+           < /div><br>
+         </code>
+         <br>
+         <br>
+      </body>
 </html>
