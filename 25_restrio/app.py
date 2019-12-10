@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from urllib.request import Request, urlopen
-import urllib, json, requests
+import urllib, json
+import urllib3
 import random
 
 app = Flask(__name__) #create new instance of flask
@@ -26,6 +27,8 @@ def pickACard():
     data = json.loads(response)
     name = "{value} of {suit}".format(value = data["cards"][0]["value"], suit = data["cards"][0]["suit"])
     return render_template("index.html", text = name, pic = data["cards"][0]["image"])
+
+urllib3.PoolManager()
 if __name__ == "__main__":
     app.debug = True
     app.run()
