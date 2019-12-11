@@ -21,3 +21,14 @@ var gcd = function(a, b){
     }
     return gcd(b % a, a)
 };
+var listOfNames = ["Liam", "Emma",
+                   "Noah", "Olivia",
+                   "William", "Ava",
+                   "James", "Isabella",
+                   "Oliver", "Sophia",
+                   "Benjamin", "Charlotte",
+                   "Elijah",	"Mia"
+];
+var randomStudent = function(){
+    return listOfNames[parseInt(Math.random() * listOfNames.length)];
+};
