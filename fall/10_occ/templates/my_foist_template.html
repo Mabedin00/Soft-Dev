@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Your Future Job! </title>
+    </head>
+    <body>
+      <h1> US Jobs </h1>
+        Team: Snake Goes Moo <br>
+        Roster: Mohidul Abedin, Brian Moses
+        <br> <hr>
+        <table style="width:100%">
+        <tr>
+          <th>Job Name</th>
+          <th>Percentage</th>
+        </tr>
+          {% for i, j in collection %}
+              <tr> <td> {{i}} </td> <td> {{j}} </td> </tr>
+          {% endfor %}
+      </table>
+      <hr>
+    </body>
+</html>
