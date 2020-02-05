@@ -1,10 +1,10 @@
-var isErect = true;
+var isRect = true;
 var c = document.getElementById("slate");
 var ctx = c.getContext("2d");
 var newFunction = function(e){
-	isErect = !isErect;
+	isRect = !isRect;
 	var text = document.getElementById("viewMode");
-	if (isErect){
+	if (isRect){
     	viewMode.innerHTML = "Rectangle";
     }
     else{
@@ -17,7 +17,7 @@ var draw = function(e){
 	
 	var x = event.clientX - 30;   
 	var y = event.clientY - 30;
-	if (isErect){
+	if (isRect){
 		ctx.fillStyle = "#0000FF";
 		ctx.fillRect(x,y,100,200);
 	}
