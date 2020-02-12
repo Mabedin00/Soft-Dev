@@ -10,6 +10,7 @@ var prevX;
 var prevY;
 
 var clear = function(e) {
+	e.preventDefault();
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	prevX = -1;
 };
