@@ -25,8 +25,8 @@ def is_your_name_popular(name):
             return True
     return False
 
-#print(get_movies_by_rating(8, 80))
-#print(get_movies_by_us_gross(50000000))
-#print(get_movies_by_year(2007))
-#print(get_movies_by_genre("Drama"))
-#print(is_your_name_popular("Greg"))
+print(get_movies_by_rating(8, 80))
+print(get_movies_by_us_gross(50000000))
+print(get_movies_by_year(2007))
+print(get_movies_by_genre("Drama"))
+print(is_your_name_popular("Greg"))

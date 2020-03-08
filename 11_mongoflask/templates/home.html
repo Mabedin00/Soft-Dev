@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    Enter a gross amount
-    <input type = "text" gross = "gross" required> <br>
-  </body>
+    <head>
+        <title></title>
+    </head>
+    <body>
+
+    {% if not type %}
+        <h2>Fill in any of these questions to get your result </h2> 
+        <form action = "\gross" method = "GET">
+            Enter a gross income:
+            <input type = "text" name = "gross">
+            <input type = "submit" value = "Submit">
+        </form> <br> <br>
+        <form action = "\year" method = "GET">
+            Enter a year:
+            <input type = "text" name = "year">
+            <input type = "submit" value = "Submit">
+        </form> <br> <br>
+        <form action = "\rating" method = "GET">
+            Enter IMDB and Rotten Tomatoes Rating (respectively):
+            <input type = "text" name = "IMDB">
+            <input type = "text" name = "Rotten_Tomatoes">
+            <input type = "submit" value = "Submit">
+        </form> <br> <br>
+        <form action = "\genre" method = "GET">
+            Enter a genre:
+            <input type = "text" name = "genre">
+            <input type = "submit" value = "Submit">
+        </form> <br> <br>
+    {% endif %}
+    {% if type == "gross" %}
+        {% for i in list %}
+            <b>{{i[0]}}</b>: ${{i[1]}} <br> <br>
+        {% endfor %}
+    {% endif %}
+    {% if type == "year"%}
+        {% for i in list %}
+            <b>{{i[0]}}</b>: {{i[1]}} <br> <br>
+        {% endfor %}
+    {% endif %}
+    {% if type == "rating"%}
+        {% for i in list %}
+            <b>{{i[0]}}</b>: IMDB: {{i[1]}}, Rotten Tomatoes: {{i[2]}} <br> <br>
+        {% endfor %}
+    {% endif %}
+    {% if type == "genre" %}
+        {% for i in list %}
+            <b>{{i[0]}}</b>: {{i[1]}} <br> <br>
+        {% endfor %}
+    {% endif %}
+
+    </body>
 </html>
