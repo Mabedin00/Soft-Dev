@@ -11,11 +11,16 @@ from flask import Flask, session, render_template, redirect, url_for, request, f
 from mongo import *
 from pymongo import MongoClient
 import random
+from import_db import *
 
 app = Flask(__name__)
-client = MongoClient() 
+client = MongoClient()
 db = client.MosDB
 collection = db.movies
+
+delt()
+setup()
+
 
 @app.route("/")
 def root():
