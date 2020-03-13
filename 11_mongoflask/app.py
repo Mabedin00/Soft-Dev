@@ -45,7 +45,9 @@ def rating():
 
 @app.route("/genre")
 def genre():
+    print(request.args)
     list = get_movies_by_genre(request.args['genre'])
+    print(list)
     return render_template("home.html", list = list, type = "genre")
 
 if __name__ == "__main__":

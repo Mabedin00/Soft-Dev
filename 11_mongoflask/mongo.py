@@ -21,7 +21,9 @@ def get_movies_by_year(year):
     return [(movie["Title"], movie["Release_Date"]) for movie in col.find({}) if int(movie["Release_Date"][-4:]) > year]
 
 def get_movies_by_genre(genre):
-    genre = genre.capitalize()
+    if genre == "{}":
+        return [(movie["Title"], movie["Major_Genre"])  for movie in col.find({})]
+
     return [(movie["Title"], movie["Major_Genre"])  for movie in col.find({"Major_Genre": genre})]
 
 def is_your_name_popular(name):
@@ -31,7 +33,11 @@ def is_your_name_popular(name):
             return True
     return False
 
-# print(get_movies_by_rating(8, 80))
+def find_all_genre():
+    print(col.distinct("Major_Genre"))
+
+#
+# print(get_movies_by_rating(9, 80))
 # print(get_movies_by_us_gross(50000000))
 # list = get_movies_by_year(2007)
 # print(list)

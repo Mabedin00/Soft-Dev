@@ -13,4 +13,3 @@ def setup():
 
 def delt():
     col.delete_many({})
-    print("ge")
