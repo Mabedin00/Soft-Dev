@@ -1,0 +1,15 @@
+<!--
+Brian Moses and Jacob Olin
+SoftDev1 pd2
+K15: SVG
+2020-04-02
+-->
+
+1. there  will be a popup for the td taht was clicked 
+
+2. there  will be a popup for the td and tr that was clicked 
+
+3. stopPropogation() stops the popups and only the table event listener triggers.
+
+4. I think the order does matter
+  - After switching I realize that it doesnt matter 

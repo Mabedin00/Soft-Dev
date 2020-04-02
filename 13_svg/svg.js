@@ -24,9 +24,11 @@ var plot = function(e) {
 };
 
 var move = function(e){
+	e.target.setAttribute("fill", "blue");
 	e.target.setAttribute("cx", Math.floor(Math.random() * 501));
 	e.target.setAttribute("cy", Math.floor(Math.random() * 501));
-	e.target.setAttribute("fill", "blue");
+	e.target.removeEventListener("click", move)
+	e.target.addEventListener("click", changeColor)
 
 };
 var changeColor = function(e){
