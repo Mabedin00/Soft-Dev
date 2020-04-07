@@ -1,0 +1,12 @@
+Chaining Methods
+allow for easier application of multiple operation on a target
+d3.scaleLinear()
+    .domain([0, d3.max(data)])
+    .range([0, 420])
+Change the limit of the bar graph
+d3.mean(<array>), d3.max(<array>), d3.mean(<array>), d3.median(<array>)
+more control over the data
+FileAttachment("values@1.json").json()
+API calls?
+import {chart as chart2} from @d3/histogram
+backbone of histograms
